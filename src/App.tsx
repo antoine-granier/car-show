@@ -7,18 +7,25 @@ function App() {
   return (
       <div className="overflow-hidden w-full bg-[#d2dae1]">
         <div className="h-screen flex flex-col items-center justify-center gap-0">
+            <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            >
+
+            <p className="uppercase text-lg sm:text-xl md:text-2xl porsche">Porsche</p>
+            </motion.div>
           <motion.div
             className="flex flex-col items-center gap-0 mb-[-20px] sm:mb-[-30px] md:mb-[-50px]"
-            initial={{ x: 300 }}
+            initial={{ x: "150%" }}
             animate={{ x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="uppercase text-lg sm:text-xl md:text-2xl">Porsche</p>
-            <p className="uppercase text-5xl sm:text-7xl md:text-9xl text-[#af1616]">911 GT3 RS</p>
+            <p className="uppercase text-5xl sm:text-7xl md:text-9xl text-[#af1616] font-semibold">911 GT3 RS</p>
           </motion.div>
           <motion.div
             className="z-10 sticky top-0"
-            initial={{ opacity: 0, x: -300 }}
+            initial={{ opacity: 0, x: "-150%" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           // initial={{opacity: 0, z: -10, scale: 0}}
